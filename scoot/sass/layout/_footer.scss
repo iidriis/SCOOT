@@ -1,0 +1,102 @@
+.footer{
+    &__nav{
+        @include responsive (phone){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__nav-list{
+        @include responsive (phone){
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 4rem;
+            flex-direction: column;
+            margin-bottom: 8rem;
+        }
+    }
+    &__nav-item:not(last-child){
+        @include responsive (phone){
+            margin-top: 1.6rem;
+        }
+    }
+    &__nav-logo{
+        @include responsive (phone){
+            margin-top: 6rem;
+        }
+    }
+    
+    &__top{
+        background-image: url(../images/svg/footer-oval.svg),url(../images/svg/footer-oval2.svg);
+        background-repeat: no-repeat;
+        background-position: bottom ,right bottom;
+        margin-top: 10rem;
+        background-color: #495567;
+        @include responsive(phone){
+            background-image: url(../images/svg/footer-oval2.svg);
+            background-position: bottom right;;
+            text-align: center;
+        }
+    }
+    &__top-container{
+        background-image: url(../images/svg/footer-oval.svg);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        display: flex;
+        align-items: center;
+        @include container;
+        @include responsive(tablet){
+            background-image: url(../images/svg/footer-top-tablet.svg);
+            background-position: bottom left;
+            flex-direction: column;
+            text-align: center;
+        }
+        h2{
+            @include site-title;
+            margin-right: auto;
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+            color: #FFFFFF;
+            @include responsive(tablet){
+                margin-right: 0;
+            }
+        }
+        img:not(:last-child){
+            margin-right: 1.8rem;
+            
+        }
+    }
+    &__nav-list{
+        @include responsive(phone){
+            display: inline;
+        }
+    }
+    &__nav-wrapper{
+        background-color: #333A44;
+    }
+    &__top-market{
+        padding-bottom: 6rem;
+        display: flex;
+    }
+    &__nav-social-links{
+        align-items: center;
+        display: flex;
+        a:not(last-child){
+            margin-right: 1.8rem;
+            @include responsive (phone){
+                margin-right: 2.4rem;
+            }
+        }
+        a:hover svg path{
+            fill: $dim-grey;
+        }
+        a:active svg path{
+            opacity: 0.5;
+        }
+    }
+    &__nav-logo:hover svg path{
+            fill: $yellow;
+        }
+    
+}
